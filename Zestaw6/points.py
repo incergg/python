@@ -21,10 +21,7 @@ class Point:
 		return False	
 	
 	def __ne__(self,other):
-		if(self.x==other.x):
-			if(self.y==other.y):
-				return False
-		return True	
+		return not self == other
 	
 	def __add__(self,other):
 		return  (Point(self.x+other.x,self.y+other.y))
