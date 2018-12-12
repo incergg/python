@@ -32,8 +32,8 @@ class RandomQueue:
 			return temp
 		else:
 			temp2 = random.randint(0, self.head)
-			temp = self.items[temp]
-			self.items[temp] = self.items[self.head]
+			temp = self.items[temp2]
+			self.items[temp2] = self.items[self.head]
 			self.items[self.head] = None
 			self.head-=1
 			return temp
