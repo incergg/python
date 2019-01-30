@@ -9,7 +9,7 @@ class Tree:
 
 
 def bst_max(top):
-	if top.data == None:
+	if top == None:
 		raise ValueError("Drzewo puste!")
 	while(top.right):
 		top = top.right
@@ -17,7 +17,7 @@ def bst_max(top):
 
 def bst_min(top):
 
-	if top.data == None:
+	if top == None:
 		raise ValueError("Drzewo puste!")
 	while(top.left):
 		top = top.left

@@ -16,58 +16,64 @@ def print_list(node):
 		
 
 def remove_head(node):
-	if node.data == None:
+	if node == None:
 		raise ValueError("Lista pusta!")
 	tmp = node
 	node = node.next
 	return node, tmp
 
 def remove_tail(node): 
-	if node.data == None:
+	if node == None:
 		raise ValueError("Lista pusta!")
-	tmphead = node
+	head = node
 	tmplast = None
 	while (node.next):
 		tmplast = node
 		node = node.next
 	if tmplast == None:
-		return Node(None), None
+		return None, node
 	tmplast.next = None
-	return tmphead, tmphead.data
+	return head, node
 		
 
 
 print ("REMOVE TAIL!\n")
-head1 = Node()
+head1 = None
 head1 = Node(1, head1)
+print_list(head1)
 head1 = Node(2, head1)
+print_list(head1)
 head1 = Node(3, head1)
 
 print_list(head1)
+
 head1, node = remove_tail(head1)
 print_list(head1)
+
 head1, node = remove_tail(head1)
 print_list(head1)
-head1, node  = remove_tail(head1)
-print_list(head1)
+
 head1, node  = remove_tail(head1)
 print_list(head1)
 
 
 print ("REMOVE HEAD!\n")
-head1 = Node()
+head1 = None
 head1 = Node(1, head1)
 head1 = Node(2, head1)
 head1 = Node(3, head1)
 
 print_list(head1)
-head1, node = remove_head(head1)
 
-print_list(head1)
 head1, node = remove_head(head1)
-
 print_list(head1)
+
+head1, node = remove_head(head1)
+print_list(head1)
+
 head1, node  = remove_head(head1)
-
 print_list(head1)
 
+
+print_list(head1)
+print_list(head1)
