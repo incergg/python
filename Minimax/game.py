@@ -152,7 +152,7 @@ def main (autoPlayFlag = 0, firstFlag = -1):
 		
 	
 		
-	system('cls')
+	system('clear')
 	print ("\n	Witaj w grze kolko i krzyzyk!	\n")
 	game.draw()
 	while first != 'T' and first != 'N':
@@ -166,7 +166,7 @@ def main (autoPlayFlag = 0, firstFlag = -1):
 			exit()
 	A = AI(game)		
 	if first == 'N':
-		system('cls')
+		system('clear')
 		print ("\n	Witaj w grze kolko i krzyzyk!	\n")
 		print ("\n Tura 'O': ")
 		game.draw()
@@ -174,7 +174,7 @@ def main (autoPlayFlag = 0, firstFlag = -1):
 		
 	while game.checkStatus() == 1:
 		try:
-			system('cls')
+			system('clear')
 			print ("\n	Witaj w grze kolko i krzyzyk!	\n")
 			print ("\n Tura 'X': ")
 			game.draw()
@@ -185,7 +185,7 @@ def main (autoPlayFlag = 0, firstFlag = -1):
 				game.play()
 			A  = AI (game)
 			if  game.checkStatus() == 1:
-				system('cls')
+				system('clear')
 				print ("\n	Witaj w grze kolko i krzyzyk!	\n")
 				print ("\n Tura 'O': ")
 				game.draw()
@@ -194,7 +194,7 @@ def main (autoPlayFlag = 0, firstFlag = -1):
 		except(EOFError, KeyboardInterrupt):
 			print ( "\n\n	Dzieki za gre! :)")
 			exit()
-	system('cls')
+	system('clear')
 	print ("\n	Witaj w grze kolko i krzyzyk!	\n")
 	game.draw()	
 	if game.checkStatus() == -1:
